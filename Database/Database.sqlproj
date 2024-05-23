@@ -59,10 +59,18 @@
     <Folder Include="Table" />
     <Folder Include="View" />
     <Folder Include="StoredProcedure" />
+    <Folder Include="Function" />
+    <Folder Include="StoredProcedure\SPUser" />
+    <Folder Include="StoredProcedure\SPBlogpost" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Table\User.sql" />
-    <Build Include="StoredProcedure\AddUser.sql" />
-    <Build Include="StoredProcedure\UpdateUser.sql" />
+    <Build Include="Table\BlogPost.sql" />
+    <Build Include="Function\GetPepper.sql" />
+    <Build Include="StoredProcedure\SPUser\AddUser.sql" />
+    <Build Include="StoredProcedure\SPUser\DeleteUser.sql" />
+    <Build Include="StoredProcedure\SPUser\UpdatePassword.sql" />
+    <Build Include="StoredProcedure\SPUser\Login.sql" />
+    <Build Include="StoredProcedure\SPUser\UpdateUser.sql" />
   </ItemGroup>
 </Project>

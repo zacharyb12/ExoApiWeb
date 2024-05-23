@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Models.Entity
+namespace Models.Entity.User
 {
     public class User
     {
@@ -15,8 +15,6 @@ namespace Models.Entity
         public string LastName { get; set; }
 
         public string Email { get; set; }
-
-        public string Password { get; set; }
 
     }
 }

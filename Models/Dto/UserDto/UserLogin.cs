@@ -4,14 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Models.Entity
+namespace Models.Entity.UserModels
 {
-    public class CreateUser
+    public class UserLogin
     {
-        public string FirstName { get; set; }
-
-        public string LastName { get; set; }
-
         public string Email { get; set; }
 
         public string Password { get; set; }

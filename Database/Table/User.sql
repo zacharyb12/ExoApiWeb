@@ -4,6 +4,9 @@
     [FirstName] VARCHAR(50) NOT NULL, 
     [LastName] VARCHAR(50) NOT NULL, 
     [Email] VARCHAR(50) NOT NULL, 
-    [Password] NVARCHAR(100) NOT NULL, 
-    [IsActive] BIT NOT NULL DEFAULT 1
+    [Password] VARBINARY(64) NOT NULL, 
+    [Salt] VARCHAR(60) NOT NULL
+    CONSTRAINT CK_Email CHECK ([Email] LIKE '%@%.%'),
+    [IsActive] BIT NOT NULL DEFAULT 1, 
+    CONSTRAINT UK_Email UNIQUE ([Email]),
 );

@@ -1,18 +1,16 @@
-﻿using Microsoft.Data.SqlClient;
-using Models.Dto.UserDto;
+﻿using Models.Dto.UserDto;
 using Models.Entity.CreateUser;
 using Models.Entity.User;
 using Models.Entity.UserModels;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dal.Repository.UserDal
+namespace Bll.Services.UserServiceBll
 {
-    public interface IUserRepository
+    public interface IUserService
     {
         IEnumerable<User> GetUsers();
 
@@ -28,7 +26,7 @@ namespace Dal.Repository.UserDal
 
         bool Exist(User user);
 
-        User? Login(UserLogin user);
+        string? Login(UserLogin user);
 
         User? UpdatePassword(UserNewPassword user, Guid id);
     }

@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[BlogPost]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT NEWID(), 
+    [Title] NVARCHAR(50) NOT NULL, 
+    [Content] TEXT NOT NULL, 
+    [UserId] UNIQUEIDENTIFIER, 
+    [CreatedAt] DATE NOT NULL, 
+    [IsActive] BIT NOT NULL DEFAULT 1
+    CONSTRAINT FK_BlogPost FOREIGN KEY (UserId) REFERENCES [User]([Id])
+)
